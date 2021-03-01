@@ -9,7 +9,7 @@ jobs:
     steps:
       -uses: actions/checkout@v2
       -name: Login to Heroku Container registry
-        env: #mistake?
+        env:
           HEROKU_API_KEY ${{ secrets.HEROKY_API_KEY }}
         run: heroku container:login
       - name: Build the Docker image
